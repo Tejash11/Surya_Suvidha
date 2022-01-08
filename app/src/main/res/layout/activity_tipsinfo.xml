@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityclass.tipsinfo">
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/arrow_back"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/tip1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/tip1img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:src="@drawable/audit"/>
+
+        <TextView
+            android:id="@+id/tip1txt"
+            android:layout_below="@+id/tip1img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Get Electricity Audit"
+            android:textColor="#292828"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_below="@+id/tip1txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Many utility companies offer a free home energy audit to customers, and it is well worth taking advantage of. If there is no such program in your area, conduct your own energy audit instead. It will clue you into areas where you could trim your energy use. "
+            android:textColor="#727273"
+            android:fontFamily="@font/oxygen"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tip2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/tip2img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:src="@drawable/dimmerswitch"/>
+
+        <TextView
+            android:id="@+id/tip2txt"
+            android:layout_below="@+id/tip2img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Install Dimmer Switches"
+            android:textColor="#292828"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_below="@+id/tip2txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use as much as need. The key to saving energy is within reach. Switch to dimmer switches, so you only use as much light as you need."
+            android:textColor="#727273"
+            android:fontFamily="@font/oxygen"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tip3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/tip3img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:src="@drawable/refrigerator"/>
+
+        <TextView
+            android:id="@+id/tip3txt"
+            android:layout_below="@+id/tip3img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Keep Your Fridge and Freezer Full"
+            android:textColor="#292828"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_below="@+id/tip3txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Everyone always tells you to keep the fridge closed. But did you know that keeping your fridge and freezer full can also save your money? Food acts as insulation and lessens the amount of time that the fridge has to run to stay cool. "
+            android:textColor="#727273"
+            android:fontFamily="@font/oxygen"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tip4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/tip4img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:src="@drawable/waterheater"/>
+
+        <TextView
+            android:id="@+id/tip4txt"
+            android:layout_below="@+id/tip4img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/poppins"
+            android:layout_gravity="center"
+            android:text="Lower the Temperature on Your Hot Water Heater"
+            android:textColor="#292828"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_below="@+id/tip4txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thirteen percent of your home's electricity goes to heating water. You can lower this percentage, by setting your hot water heater to 130 to 140 degrees. For even more savings, install an insulation jacket, and insulate the first six feet of piping that comes off of your heater."
+            android:textColor="#727273"
+            android:fontFamily="@font/oxygen"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tip5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/tip5img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:src="@drawable/ledlight"/>
+
+        <TextView
+            android:id="@+id/tip5txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tip5img"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Switch to LEDs"
+            android:textColor="#292828"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_below="@+id/tip5txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LED lights bulbs use 90 percent less energy than incandescent bulbs. Switch out the most widely used bulbs in your home. Then, replace the rest as they burn out."
+            android:textColor="#727273"
+            android:fontFamily="@font/oxygen"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
