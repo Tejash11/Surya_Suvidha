@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".billcalculator"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/billcalcihead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/totalbillbackbtn"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/arrow_back"
+                    android:layout_marginStart="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bill Calculator"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/totalbillcard"
+                android:layout_below="@+id/billcalcihead"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:padding="3dp"
+                android:elevation="6dp"
+                android:background="@drawable/whitebg">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/calculatebill"
+                    android:layout_gravity="center"
+                    android:padding="3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Overall Bill"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"/>
+            </LinearLayout>
+            <!--        </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/alllinearforbills"
+                android:layout_below="@+id/totalbillcard"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/accard"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:padding="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@drawable/whitebg">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/airconditioner"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Air Condition Bill"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/refricard"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:padding="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@drawable/whitebg">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/refrigerator"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Refrigerator Bill"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/waterheatercard"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:padding="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@drawable/whitebg">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/waterheater"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Heater Bill"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/lightcard"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:padding="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@drawable/whitebg">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/lightbulb"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Light Bill"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/fancard"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:padding="15dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/whitebg">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/fan"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fan Bill"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/washingmachinecard"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:padding="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@drawable/whitebg">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/washingmachine"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Washing Machine Bill"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addappliances"
+                android:layout_below="@+id/alllinearforbills"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="1dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_centerHorizontal="true"
+                app:cardBackgroundColor="#E1F6FF"
+                android:layout_margin="20dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/addbtn"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
