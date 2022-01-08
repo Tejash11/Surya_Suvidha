@@ -80,8 +80,8 @@ public class home extends Fragment {
         // ImageView infobtn = (ImageView) view.findViewById(R.id.ibutton);
 
         List<Integer> imagelist = new ArrayList<>();
-        imagelist.add(R.drawable.slide1);
         imagelist.add(R.drawable.slide2);
+        imagelist.add(R.drawable.slide1);
         imagelist.add(R.drawable.solar);
         imagelist.add(R.drawable.billcalci);
 

@@ -70,6 +70,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="gone"
+                android:orientation="vertical"
+                android:id="@+id/knowlinear"
                 android:layout_marginTop="160dp">
 
 
@@ -92,13 +94,15 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@drawable/navyblue"
                             android:orientation="vertical">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/saving"/>
+                                android:padding="3dp"
+                                android:src="@drawable/panels" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -137,13 +141,16 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:id="@+id/schemes"
+                            android:background="@drawable/navyblue"
                             android:orientation="vertical">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/saving"/>
+                                android:padding="5dp"
+                                android:src="@drawable/question"/>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -153,7 +160,7 @@
                                 android:fontFamily="@font/poppins"
                                 android:textColor="@color/black"
                                 android:gravity="center"
-                                android:text="View 3D Solar"/>
+                                android:text="Gov. Schemes"/>
 
 
 
@@ -173,6 +180,140 @@
 
                 </LinearLayout>
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/slide1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="No. of Panels : "
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="6 of 1 watt"
+                        android:textSize="18sp"
+                        android:id="@+id/npanels"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"/>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Area : "
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="6 of 1 watt"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/area"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"/>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Approximate Cost : "
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="6 of 1 watt"
+                        android:textSize="18sp"
+                        android:id="@+id/cost"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"/>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/navyblue"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        android:id="@+id/future"
+                        android:src="@drawable/future"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Future Compensation"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+
 
 
 
@@ -185,6 +326,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="visible"
+                android:id="@+id/datalinear"
                 android:layout_marginTop="160dp">
 
                 <LinearLayout
@@ -1098,8 +1240,9 @@
                     android:text="@string/solar_data"
                     android:textSize="16sp"
                     android:background="@drawable/whiteoutline"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="#000000"
+                    android:id="@+id/solardata"
                     android:gravity="center"
                     android:layout_weight="1"/>
 
@@ -1110,9 +1253,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Other features"
+                    android:text="Know Solar"
                     android:textSize="16sp"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:id="@+id/knowsolar"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="#FFFFFF"
                     android:gravity="center"
                     android:layout_weight="1"/>

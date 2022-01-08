@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +35,8 @@ import java.net.URL;
  */
 public class solar extends Fragment {
     String lat , lon;
+    int area;
+
 
 
     // ActivityMainBinding binding;
@@ -101,6 +104,36 @@ public class solar extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_solar, container, false);
+
+        TextView knowsolar = (TextView) v.findViewById(R.id.knowsolar);
+        TextView datasolar = (TextView) v.findViewById(R.id.solardata);
+        RelativeLayout datalinear = (RelativeLayout) v.findViewById(R.id.datalinear);
+        LinearLayout knowlinear = (LinearLayout) v.findViewById(R.id.knowlinear);
+
+        datasolar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                datalinear.setVisibility(View.VISIBLE);
+                knowlinear.setVisibility(View.GONE);
+
+
+            }
+        });
+
+        knowsolar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                knowlinear.setVisibility(View.VISIBLE);
+                datalinear.setVisibility(View.GONE);
+
+
+            }
+        });
+
+
+
         TextView loctxt = (TextView) v.findViewById(R.id.location_text);
         Bundle bundle = getArguments();
 
@@ -108,6 +141,7 @@ public class solar extends Fragment {
         {
             lat = bundle.getString("latitude").substring(0,5);
             lon = bundle.getString("longitude").substring(0,5);
+            area = bundle.getInt("area");
             loctxt.setText(lat+" , "+lon);
         }
 
@@ -353,7 +387,7 @@ public class solar extends Fragment {
                 }
                 else
                 {
-                    float area = 32;
+                    //area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));

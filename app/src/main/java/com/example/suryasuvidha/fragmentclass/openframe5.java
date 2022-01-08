@@ -3,13 +3,16 @@ package com.example.suryasuvidha.fragmentclass;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompatSideChannelService;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.suryasuvidha.R;
 
@@ -68,6 +71,10 @@ public class openframe5 extends Fragment {
         Bundle bundle = getArguments();
 
 
+        EditText length = (EditText) v.findViewById(R.id.length);
+        EditText width = (EditText) v.findViewById(R.id.width);
+
+
         TextView proceed = (TextView) v.findViewById(R.id.proceed);
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,10 +83,29 @@ public class openframe5 extends Fragment {
                 /*Intent i = new Intent(getContext(), MainActivity.class);
                 i.putExtra("bundle", bundle);
                 startActivity(i);*/
-                AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                Fragment myFragment = new Openframe4();
-                myFragment.setArguments(bundle);
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.openframe, myFragment).addToBackStack(null).commit();
+
+                String ll = length.getText().toString();
+                String ww = width.getText().toString();
+
+                if(ll.isEmpty() || ww.isEmpty())
+                {
+                    Toast.makeText(getContext(),"Fill length and width", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Float l = Float.parseFloat(length.getText().toString());
+                    Float w = Float.parseFloat(length.getText().toString());
+
+                    int area = (int) (l*w);
+                    bundle.putInt("area", area);
+
+
+                    AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                    Fragment myFragment = new Openframe4();
+                    myFragment.setArguments(bundle);
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.openframe, myFragment).addToBackStack(null).commit();
+
+                }
 
 
             }
