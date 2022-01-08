@@ -8,6 +8,7 @@ Here comes Solar Farms in the context.
 3) Solar farms are possible all over the world. The sun shines everywhere in the world for at least a few hours (even in Iceland which has the shortest daylight at ~5 hours on the winter solstice). While you might think that countries along the equator might harness the most solar power.
 
    Our project Surya Suvidha will be showing all the solar data in a optimal graphical representation with annual and monthly categorization. 
+   And will also tell user about the capacity of PV system, approximate cost of the system, future compensation to view the future with solar better.
    So it may help farmer in his decision making of opting solar. 
    All the data is going to be dynamic as per their latitudes and longitudes. 
 
@@ -17,3 +18,12 @@ Here comes Solar Farms in the context.
 
 5) Apart from that, Solar panels produces maximum energy when they work with maximum efficiency where optimal angle plays a major role. 
 Hence, to show optimal angle we will be using 3D solar panel model so user can visualize the angle better.
+
+6) Surya Suvidha will be providing all the government schemes which can compensate their investment cost to the lowest. 
+   Highlight - In 2019, India launched the PM-KUSUM scheme: a major initiative to promote solar-powered irrigation, thereby boosting farmer well-being and transitioning to clean      energy.
+   
+7) Users can also calculate their bills by using billcaclulator which we will provide in our application and apart from that we do allow users to view/pay their electricity bills    by a one tap redirection. 
+
+We understand today that humanity's use of fossil fuels is severely damaging our environment. Fossil fuels cause local pollution where they are produced and used, and their ongoing use is causing lasting harm to the climate of our entire planet.
+This is right time for everyone of us to move towards cleaner source energy which is green, reliable and lessharmful. 
+MAKE YOUR FARM SOLAR! MAKE YOUR HOME SOLAR! MAKE YOUR INDIA SOLAR!
