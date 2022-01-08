@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import com.example.suryasuvidha.R;
 import com.example.suryasuvidha.fragmentclass.AgriVoltaics;
 import com.example.suryasuvidha.fragmentclass.home;
+import com.example.suryasuvidha.fragmentclass.solar;
 
 public class MainActivity extends AppCompatActivity {
     ImageView homebtn, solarbtn, windbtn;
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        /*solarbtn.setOnClickListener(new View.OnClickListener() {
+        solarbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 solarbtn.setImageResource(R.drawable.sunimg);
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 t.replace(R.id.fragment, solar);
                 t.commit();
             }
-        });*/
+        });
 
         windbtn.setOnClickListener(new View.OnClickListener() {
             @Override
