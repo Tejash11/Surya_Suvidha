@@ -1213,7 +1213,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Fan Power: "
+                                    android:text="Power: "
                                     android:fontFamily="@font/poppins"
                                     android:textStyle="bold"
                                     android:textColor="#434141"
@@ -1508,7 +1508,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Fan Power: "
+                                    android:text="Power: "
                                     android:fontFamily="@font/poppins"
                                     android:textStyle="bold"
                                     android:textColor="#434141"
@@ -1803,7 +1803,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Fan Power: "
+                                    android:text="Power: "
                                     android:fontFamily="@font/poppins"
                                     android:textStyle="bold"
                                     android:textColor="#434141"
@@ -2098,7 +2098,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Fan Power: "
+                                    android:text="Power: "
                                     android:fontFamily="@font/poppins"
                                     android:textStyle="bold"
                                     android:textColor="#434141"
@@ -2393,7 +2393,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Fan Power: "
+                                    android:text="Power: "
                                     android:fontFamily="@font/poppins"
                                     android:textStyle="bold"
                                     android:textColor="#434141"
@@ -2688,7 +2688,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Fan Power: "
+                                    android:text="Power: "
                                     android:fontFamily="@font/poppins"
                                     android:textStyle="bold"
                                     android:textColor="#434141"

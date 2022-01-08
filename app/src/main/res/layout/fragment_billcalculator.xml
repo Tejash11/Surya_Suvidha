@@ -281,6 +281,7 @@
                             android:layout_margin="5dp"
                             android:padding="15dp"
                             android:layout_gravity="center"
+                            android:gravity="center"
                             android:background="@drawable/whitebg">
 
                             <ImageView
