@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SuryaSuvidha">
-        <activity android:name=".activityclass.tipsinfo"></activity>
+        <activity android:name=".activityclass.govn_scheme"></activity>
+        <activity android:name=".activityclass.tipsinfo" />
         <activity android:name=".activityclass.billtips" />
         <activity android:name=".activityclass.checkyourbill" />
         <activity android:name=".activityclass.i_btninfo" />
