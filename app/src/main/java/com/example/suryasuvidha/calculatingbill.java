@@ -254,13 +254,13 @@ public class calculatingbill extends Fragment {
                     String totalbillsprice = String.valueOf(totalbillprice.getText());
                     String totalbillsduration = String.valueOf(totalbillduration.getText());
 
-                    if(totalacpower.trim().isEmpty() && totalacquantity.trim().isEmpty() && totalacdailyusage.trim().isEmpty() &&
-                            totalrefpower.trim().isEmpty() && totalrefquantity.trim().isEmpty() && totalrefdailyusage.trim().isEmpty() &&
-                            totalheaterpower.trim().isEmpty() && totalheaterquantity.trim().isEmpty() && totalheaterdailyusage.trim().isEmpty() &&
-                            totallightpower.trim().isEmpty() && totallightquantity.trim().isEmpty() && totallightdailyusage.trim().isEmpty() &&
-                            totalfanpower.trim().isEmpty() && totalfanquantity.trim().isEmpty() && totalfandailyusage.trim().isEmpty() &&
-                            totalwashingpower.trim().isEmpty() && totalwashingquantity.trim().isEmpty() && totalwashingdailyusage.trim().isEmpty() &&
-                            totalbillsprice.trim().isEmpty() && totalbillsduration.trim().isEmpty())
+                    if(totalacpower.trim().isEmpty() || totalacquantity.trim().isEmpty() || totalacdailyusage.trim().isEmpty() ||
+                            totalrefpower.trim().isEmpty() || totalrefquantity.trim().isEmpty() || totalrefdailyusage.trim().isEmpty() ||
+                            totalheaterpower.trim().isEmpty() || totalheaterquantity.trim().isEmpty() || totalheaterdailyusage.trim().isEmpty() ||
+                            totallightpower.trim().isEmpty() || totallightquantity.trim().isEmpty() || totallightdailyusage.trim().isEmpty() ||
+                            totalfanpower.trim().isEmpty() || totalfanquantity.trim().isEmpty() || totalfandailyusage.trim().isEmpty() ||
+                            totalwashingpower.trim().isEmpty() || totalwashingquantity.trim().isEmpty() || totalwashingdailyusage.trim().isEmpty() ||
+                            totalbillsprice.trim().isEmpty() || totalbillsduration.trim().isEmpty())
                     {
                         Toast.makeText(getActivity(),"Please fill all inputs", Toast.LENGTH_SHORT).show();
                     }
@@ -352,7 +352,7 @@ public class calculatingbill extends Fragment {
                     String edittextprice = String.valueOf(refprice.getText());
                     String edittextduration = String.valueOf(refduration.getText());
 
-                    if(edittextpower.trim().isEmpty() && edittextquantity.trim().isEmpty() && edittextdailyusage.trim().isEmpty() && edittextprice.trim().isEmpty() && edittextduration.trim().isEmpty())
+                    if(edittextpower.trim().isEmpty() || edittextquantity.trim().isEmpty() || edittextdailyusage.trim().isEmpty() || edittextprice.trim().isEmpty() || edittextduration.trim().isEmpty())
                     {
                         Toast.makeText(getActivity(),"Please fill all inputs", Toast.LENGTH_SHORT).show();
                     }
@@ -387,7 +387,7 @@ public class calculatingbill extends Fragment {
                     String edittextprice = String.valueOf(heaterprice.getText());
                     String edittextduration = String.valueOf(heaterduration.getText());
 
-                    if(edittextpower.trim().isEmpty() && edittextquantity.trim().isEmpty() && edittextdailyusage.trim().isEmpty() && edittextprice.trim().isEmpty() && edittextduration.trim().isEmpty())
+                    if(edittextpower.trim().isEmpty() || edittextquantity.trim().isEmpty() || edittextdailyusage.trim().isEmpty() || edittextprice.trim().isEmpty() || edittextduration.trim().isEmpty())
                     {
                         Toast.makeText(getActivity(),"Please fill all inputs", Toast.LENGTH_SHORT).show();
                     }
@@ -422,7 +422,7 @@ public class calculatingbill extends Fragment {
                     String edittextprice = String.valueOf(lightprice.getText());
                     String edittextduration = String.valueOf(lightduration.getText());
 
-                    if(edittextpower.trim().isEmpty() && edittextquantity.trim().isEmpty() && edittextdailyusage.trim().isEmpty() && edittextprice.trim().isEmpty() && edittextduration.trim().isEmpty())
+                    if(edittextpower.trim().isEmpty() || edittextquantity.trim().isEmpty() || edittextdailyusage.trim().isEmpty() || edittextprice.trim().isEmpty() || edittextduration.trim().isEmpty())
                     {
                         Toast.makeText(getActivity(),"Please fill all inputs", Toast.LENGTH_SHORT).show();
                     }
@@ -457,7 +457,7 @@ public class calculatingbill extends Fragment {
                     String edittextprice = String.valueOf(fanprice.getText());
                     String edittextduration = String.valueOf(fanduration.getText());
 
-                    if(edittextpower.trim().isEmpty() && edittextquantity.trim().isEmpty() && edittextdailyusage.trim().isEmpty() && edittextprice.trim().isEmpty() && edittextduration.trim().isEmpty())
+                    if(edittextpower.trim().isEmpty() || edittextquantity.trim().isEmpty() || edittextdailyusage.trim().isEmpty() || edittextprice.trim().isEmpty() || edittextduration.trim().isEmpty())
                     {
                         Toast.makeText(getActivity(),"Please fill all inputs", Toast.LENGTH_SHORT).show();
                     }
@@ -492,7 +492,7 @@ public class calculatingbill extends Fragment {
                     String edittextprice = String.valueOf(washingprice.getText());
                     String edittextduration = String.valueOf(washingduration.getText());
 
-                    if(edittextpower.trim().isEmpty() && edittextquantity.trim().isEmpty() && edittextdailyusage.trim().isEmpty() && edittextprice.trim().isEmpty() && edittextduration.trim().isEmpty())
+                    if(edittextpower.trim().isEmpty() || edittextquantity.trim().isEmpty() || edittextdailyusage.trim().isEmpty() || edittextprice.trim().isEmpty() || edittextduration.trim().isEmpty())
                     {
                         Toast.makeText(getActivity(),"Please fill all inputs", Toast.LENGTH_SHORT).show();
                     }
