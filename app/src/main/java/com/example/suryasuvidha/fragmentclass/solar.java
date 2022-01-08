@@ -3,6 +3,7 @@ package com.example.suryasuvidha.fragmentclass;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -115,6 +116,21 @@ public class solar extends Fragment {
         TextView cost = (TextView) v.findViewById(R.id.cost);
         TextView areatxt = (TextView) v.findViewById(R.id.area);
 
+        TextView future = (TextView) v.findViewById(R.id.future);
+
+        /*future.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                Fragment billcalculatingfragment = new expense();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment, billcalculatingfragment).addToBackStack(null).commit();
+
+
+
+            }
+        });*/
+
         Bundle bundle = getArguments();
         area = bundle.getInt("area");
         Area = area;
@@ -128,6 +144,11 @@ public class solar extends Fragment {
                 datalinear.setVisibility(View.VISIBLE);
                 knowlinear.setVisibility(View.GONE);
 
+                datasolar.setTextColor(Color.parseColor("#000000"));
+                datasolar.setBackground(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.whiteoutline));
+                knowsolar.setTextColor(Color.parseColor("#FFFFFF"));
+                knowsolar.setBackground(null);
+
 
             }
         });
@@ -138,6 +159,13 @@ public class solar extends Fragment {
 
                 knowlinear.setVisibility(View.VISIBLE);
                 datalinear.setVisibility(View.GONE);
+
+                knowsolar.setTextColor(Color.parseColor("#000000"));
+                knowsolar.setBackground(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.whiteoutline));
+                datasolar.setTextColor(Color.parseColor("#FFFFFF"));
+                datasolar.setBackground(null);
+
+
                 int nsolarpan = Area/9;
                 nsolarpan = nsolarpan/3;
 

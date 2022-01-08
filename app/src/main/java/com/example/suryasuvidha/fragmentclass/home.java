@@ -1,6 +1,7 @@
 package com.example.suryasuvidha.fragmentclass;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -88,6 +89,16 @@ public class home extends Fragment {
         SliderAdapter imageAdapter = new SliderAdapter(imagelist);
         pager.setAdapter(imageAdapter);
 
+        LinearLayout whet = (LinearLayout) view.findViewById(R.id.weatherlayout);
+
+        whet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://weather.com/en-IN/weather/today/l/28.83,77.58?par=google"));
+                startActivity(browserIntent);
+
+            }
+        });
         LinearLayout billcalculatorlayout = (LinearLayout) view.findViewById(R.id.billcalculatorlayout);
         billcalculatorlayout.setOnClickListener(new View.OnClickListener() {
             @Override
