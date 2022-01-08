@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.suryasuvidha.R;
+import com.example.suryasuvidha.activityclass.billtips;
 import com.example.suryasuvidha.activityclass.checkyourbill;
 import com.example.suryasuvidha.activityclass.i_btninfo;
 
@@ -27,7 +28,7 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class home extends Fragment {
-    CardView viewbill;
+    CardView viewbill,tipscard;
     ViewPager pager;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -113,6 +114,15 @@ public class home extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getContext(), checkyourbill.class);
+                startActivity(i);
+            }
+        });
+
+        tipscard = (CardView) view.findViewById(R.id.tips);
+        tipscard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), billtips.class);
                 startActivity(i);
             }
         });
