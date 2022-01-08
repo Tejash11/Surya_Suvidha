@@ -1,5 +1,6 @@
 package com.example.suryasuvidha.fragmentclass;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -17,6 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.suryasuvidha.R;
+import com.example.suryasuvidha.activityclass.MainActivity;
+import com.example.suryasuvidha.activityclass.govn_scheme;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +38,7 @@ import java.net.URL;
  * create an instance of this fragment.
  */
 public class solar extends Fragment {
+    LinearLayout govnschemes;
     String lat , lon;
     int area;
 
@@ -136,6 +140,14 @@ public class solar extends Fragment {
         Area = area;
 
 
+        govnschemes = (LinearLayout) v.findViewById(R.id.govnschemes);
+        govnschemes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), govn_scheme.class);
+                startActivity(i);
+            }
+        });
 
         datasolar.setOnClickListener(new View.OnClickListener() {
             @Override
