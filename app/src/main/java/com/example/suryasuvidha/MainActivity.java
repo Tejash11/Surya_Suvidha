@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    ViewPager pager;
     ImageView homebtn, solarbtn, windbtn;
 
     @Override
@@ -26,13 +25,12 @@ public class MainActivity extends AppCompatActivity {
         solarbtn = (ImageView) findViewById(R.id.solarbtn);
         windbtn = (ImageView) findViewById(R.id.windbtn);
 
-       /* homebtn.setImageResource(R.drawable.colorhome);
+        homebtn.setImageResource(R.drawable.colorhome);
         FragmentManager m = getSupportFragmentManager();
         FragmentTransaction t = m.beginTransaction();
         Fragment Home = new home();
         t.replace(R.id.fragment, Home);
         t.commit();
-*/
 
 //        homebtn.setOnClickListener(new View.OnClickListener() {
         Intent i = getIntent();
@@ -40,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        ImageView solarbtn = (ImageView) findViewById(R.id.solarbtn);
+//        ImageView solarbtn = (ImageView) findViewById(R.id.solarbtn);
 
-        /*homebtn.setOnClickListener(new View.OnClickListener() {
+        homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 solarbtn.setImageResource(R.drawable.sunfill);
@@ -55,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 t.replace(R.id.fragment, home);
                 t.commit();
             }
-        });*/
+        });
 
 
         /*solarbtn.setOnClickListener(new View.OnClickListener() {
