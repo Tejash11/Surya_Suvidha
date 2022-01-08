@@ -1,4 +1,4 @@
-package com.example.suryasuvidha;
+package com.example.suryasuvidha.fragmentclass;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.example.suryasuvidha.R;
+import com.example.suryasuvidha.activityclass.checkyourbill;
+import com.example.suryasuvidha.activityclass.i_btninfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,7 +112,7 @@ public class home extends Fragment {
         viewbill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getContext(),checkyourbill.class);
+                Intent i = new Intent(getContext(), checkyourbill.class);
                 startActivity(i);
             }
         });

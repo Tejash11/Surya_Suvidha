@@ -1,4 +1,4 @@
-package com.example.suryasuvidha;
+package com.example.suryasuvidha.fragmentclass;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,8 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.example.suryasuvidha.R;
 
 import java.util.List;
 

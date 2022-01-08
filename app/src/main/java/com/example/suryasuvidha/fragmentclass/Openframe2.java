@@ -1,14 +1,11 @@
-package com.example.suryasuvidha;
+package com.example.suryasuvidha.fragmentclass;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,12 +14,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.suryasuvidha.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Openframe3#newInstance} factory method to
+ * Use the {@link Openframe2#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Openframe3 extends Fragment {
+public class Openframe2 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,11 +31,8 @@ public class Openframe3 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    String lat;
-    String lon;
 
-
-    public Openframe3() {
+    public Openframe2() {
         // Required empty public constructor
     }
 
@@ -46,11 +42,11 @@ public class Openframe3 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Openframe3.
+     * @return A new instance of fragment Openframe2.
      */
     // TODO: Rename and change types and number of parameters
-    public static Openframe3 newInstance(String param1, String param2) {
-        Openframe3 fragment = new Openframe3();
+    public static Openframe2 newInstance(String param1, String param2) {
+        Openframe2 fragment = new Openframe2();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -71,28 +67,10 @@ public class Openframe3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_openframe3, container, false);
+        View v = inflater.inflate(R.layout.fragment_openframe2, container, false);
 
-
-        Bundle bundle = getArguments();
-        TextView nextbtn = (TextView) v.findViewById(R.id.Nexttbtn);
-        TextView lattxt = (TextView) v.findViewById(R.id.lat);
-        TextView lontxt = (TextView) v.findViewById(R.id.lon);
-
-        if(getArguments()!=null)
-        {
-            lattxt.setText(bundle.getString("latitude").substring(0,9));
-            lontxt.setText(bundle.getString("longitude").substring(0,9));
-
-        }
-
-        FragmentManager m = getActivity().getSupportFragmentManager();
-        FragmentTransaction t = m.beginTransaction();
-        Fragment frame = new MapsFragment();
-        frame.setArguments(bundle);
-        t.replace(R.id.mapframe, frame);
-        t.commit();
-
+        EditText name = (EditText) v.findViewById(R.id.nameedtxt);
+        TextView nextbtn = (TextView) v.findViewById(R.id.Nextbtn);
 
         View mark1 = (View) v.findViewById(R.id.markframe1);
         View mark2 = (View) v.findViewById(R.id.markframe2);
@@ -101,32 +79,37 @@ public class Openframe3 extends Fragment {
 
         mark1.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.orangecircle));
         mark2.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.orangecircle));
-        mark3.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.orangecircle));
+        mark3.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.whitecircle));
         mark4.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.whitecircle));
+
 
         nextbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                /*Bundle bundle = new Bundle();
+                bundle.putInt("mark1",0);
+                bundle.putInt("mark2", 0);
+                bundle.putInt("mark3", 1);
+                bundle.putInt("mark4", 0);*/
 
-                if(getArguments()!=null)
-                {
+
+                if (name.getText().toString() != null) {
                     AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                    Fragment myFragment = new openframe5();
-                    myFragment.setArguments(bundle);
+                    Fragment myFragment = new Openframe3();
+                    //myFragment.setArguments(bundle_addsubject);
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.openframe, myFragment).addToBackStack(null).commit();
 
+                } else {
+                    Toast.makeText(getContext(), "Enter your name to proceed", Toast.LENGTH_SHORT).show();
                 }
-                else
-                {
-                    Toast.makeText(getContext(), "Press Long to mark your location", Toast.LENGTH_SHORT).show();
-                }
-
 
 
             }
         });
 
+
         return v;
+
     }
 }

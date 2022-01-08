@@ -1,15 +1,18 @@
-package com.example.suryasuvidha;
+package com.example.suryasuvidha.activityclass;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.suryasuvidha.R;
+import com.example.suryasuvidha.fragmentclass.AgriVoltaics;
+import com.example.suryasuvidha.fragmentclass.home;
 
 public class MainActivity extends AppCompatActivity {
     ImageView homebtn, solarbtn, windbtn;
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-       /* windbtn.setOnClickListener(new View.OnClickListener() {
+        windbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 windbtn.setImageResource(R.drawable.windimg);
@@ -79,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
                 homebtn.setImageResource(R.drawable.homepageoutline);
                 FragmentManager m = getSupportFragmentManager();
                 FragmentTransaction t = m.beginTransaction();
-                Fragment solar = new solar();
+                Fragment solar = new AgriVoltaics();
                 t.replace(R.id.fragment, solar);
                 t.commit();
             }
-        });*/
+        });
     }
 }

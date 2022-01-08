@@ -17,8 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SuryaSuvidha">
-        <activity android:name=".checkyourbill"></activity>
-        <activity android:name=".i_btninfo" />
+        <activity android:name=".activityclass.checkyourbill"></activity>
+        <activity android:name=".activityclass.i_btninfo" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -31,14 +31,14 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCHSPfafzK7nH4x_Qkuy64joL7C0XKl7SQ" />
 
-        <activity android:name=".splashscreen">
+        <activity android:name=".activityclass.splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".activityclass.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

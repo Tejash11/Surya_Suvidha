@@ -1,4 +1,4 @@
-package com.example.suryasuvidha;
+package com.example.suryasuvidha.activityclass;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.example.suryasuvidha.R;
+import com.example.suryasuvidha.activityclass.MainActivity;
 
 public class checkyourbill extends AppCompatActivity {
 
@@ -23,7 +26,7 @@ public class checkyourbill extends AppCompatActivity {
         viewbillbackbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),MainActivity.class);
+                Intent i = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(i);
             }
         });

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".home">
+    tools:context=".fragmentclass.home">
 
     <RelativeLayout
         android:id="@+id/statusbar"
@@ -166,34 +166,48 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"/>
 
-                <LinearLayout
-                    android:id="@+id/weatherlayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="125dp"
-                    android:orientation="horizontal"
-                    android:padding="10dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/weatherbg">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/weathergirl"
-                        android:layout_weight="0.9"/>
 
-                    <TextView
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Know your\nWeather"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:textSize="22sp"/>
-                </LinearLayout>
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/weatherbg"/>
+
+                    <LinearLayout
+                        android:id="@+id/weatherlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:orientation="horizontal"
+                        android:padding="0dp">
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/weathergirl"
+                            android:layout_weight="0.9"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginTop="25dp"
+                            android:text="Know your\nWeather"
+                            android:textColor="#046675"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
 
 
 

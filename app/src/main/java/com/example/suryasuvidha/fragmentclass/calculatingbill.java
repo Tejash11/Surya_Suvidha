@@ -1,4 +1,4 @@
-package com.example.suryasuvidha;
+package com.example.suryasuvidha.fragmentclass;
 
 import android.os.Bundle;
 
@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.suryasuvidha.R;
 
 /**
  * A simple {@link Fragment} subclass.

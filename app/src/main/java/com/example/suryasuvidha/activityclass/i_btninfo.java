@@ -1,8 +1,10 @@
-package com.example.suryasuvidha;
+package com.example.suryasuvidha.activityclass;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.suryasuvidha.R;
 
 public class i_btninfo extends AppCompatActivity {
 
