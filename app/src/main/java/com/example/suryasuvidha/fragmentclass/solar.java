@@ -37,6 +37,7 @@ public class solar extends Fragment {
     String lat , lon;
     int area;
 
+    int Area;
 
 
     // ActivityMainBinding binding;
@@ -110,6 +111,16 @@ public class solar extends Fragment {
         RelativeLayout datalinear = (RelativeLayout) v.findViewById(R.id.datalinear);
         LinearLayout knowlinear = (LinearLayout) v.findViewById(R.id.knowlinear);
 
+        TextView npanels = (TextView) v.findViewById(R.id.npanels);
+        TextView cost = (TextView) v.findViewById(R.id.cost);
+        TextView areatxt = (TextView) v.findViewById(R.id.area);
+
+        Bundle bundle = getArguments();
+        area = bundle.getInt("area");
+        Area = area;
+
+
+
         datasolar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,6 +138,13 @@ public class solar extends Fragment {
 
                 knowlinear.setVisibility(View.VISIBLE);
                 datalinear.setVisibility(View.GONE);
+                int nsolarpan = Area/9;
+                nsolarpan = nsolarpan/3;
+
+                npanels.setText(nsolarpan + " of 330 watts");
+                areatxt.setText(Area + "m2");
+                cost.setText(nsolarpan*6600 +"");
+
 
 
             }
@@ -135,13 +153,16 @@ public class solar extends Fragment {
 
 
         TextView loctxt = (TextView) v.findViewById(R.id.location_text);
-        Bundle bundle = getArguments();
+
 
         if(getArguments()!=null)
         {
             lat = bundle.getString("latitude").substring(0,5);
             lon = bundle.getString("longitude").substring(0,5);
             area = bundle.getInt("area");
+            //Area = area;
+            //area = area;
+
             loctxt.setText(lat+" , "+lon);
         }
 
@@ -769,7 +790,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -824,7 +845,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -880,7 +901,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                   // float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -935,7 +956,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -992,7 +1013,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -1049,7 +1070,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -1104,7 +1125,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                   // float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -1159,7 +1180,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -1215,7 +1236,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -1270,7 +1291,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -1325,7 +1346,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
@@ -1381,7 +1402,7 @@ public class solar extends Fragment {
                 else
                 {
 
-                    float area = 32;
+                    //float area = 32;
                     float capacity = (float) (area*0.165);
                     float r = capacity/2;
                     float e = (float) (area*r*(0.75));
