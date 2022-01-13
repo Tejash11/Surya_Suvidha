@@ -75,9 +75,14 @@ public class home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         pager = view.findViewById(R.id.viewpager);
+
+        Bundle bundle = getArguments();
+
 
         // ImageView infobtn = (ImageView) view.findViewById(R.id.ibutton);
 
@@ -134,6 +139,7 @@ public class home extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getContext(), billtips.class);
+                i.putExtra("bundle", bundle);
                 startActivity(i);
             }
         });

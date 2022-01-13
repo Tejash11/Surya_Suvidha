@@ -21,11 +21,16 @@ public class tipsinfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tipsinfo);
 
+        Intent i = getIntent();
+        Bundle bundle = i.getBundleExtra("bundle");
+
+
         backbutton = findViewById(R.id.backbtn);
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(), billtips.class);
+                i.putExtra("bundle", bundle);
                 startActivity(i);
             }
         });

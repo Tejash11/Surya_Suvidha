@@ -136,7 +136,7 @@ public class solar extends Fragment {
         });*/
 
         Bundle bundle = getArguments();
-        area = bundle.getInt("area");
+        area = bundle.getInt("area", 50);
         Area = area;
 
 

@@ -21,6 +21,9 @@ public class billtips extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_billtips);
 
+        Intent i = getIntent();
+        Bundle bundle = i.getBundleExtra("bundle");
+
         audit = findViewById(R.id.audit);
         dimswitch = findViewById(R.id.dimswitch);
         refrigerator = findViewById(R.id.refrigerator);
@@ -32,6 +35,7 @@ public class billtips extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),MainActivity.class);
+                i.putExtra("bundle", bundle);
                 startActivity(i);
             }
         });
@@ -40,6 +44,7 @@ public class billtips extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),tipsinfo.class);
+                i.putExtra("bundle", bundle);
                 i.putExtra("audit",1);
                 i.putExtra("dimswitch",0);
                 i.putExtra("refrigerator",0);
@@ -53,6 +58,7 @@ public class billtips extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),tipsinfo.class);
+                i.putExtra("bundle", bundle);
                 i.putExtra("audit",0);
                 i.putExtra("dimswitch",1);
                 i.putExtra("refrigerator",0);
@@ -66,6 +72,7 @@ public class billtips extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),tipsinfo.class);
+                i.putExtra("bundle", bundle);
                 i.putExtra("audit",0);
                 i.putExtra("dimswitch",0);
                 i.putExtra("refrigerator",1);
@@ -79,6 +86,7 @@ public class billtips extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),tipsinfo.class);
+                i.putExtra("bundle", bundle);
                 i.putExtra("audit",0);
                 i.putExtra("dimswitch",0);
                 i.putExtra("refrigerator",0);
@@ -92,6 +100,7 @@ public class billtips extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),tipsinfo.class);
+                i.putExtra("bundle", bundle);
                 i.putExtra("audit",0);
                 i.putExtra("dimswitch",0);
                 i.putExtra("refrigerator",0);
